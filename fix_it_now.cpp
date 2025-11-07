@@ -23,8 +23,6 @@
  *   - Just a small prototype I'm working on 
  */
 
-
-
 #include <iostream>
 #include <Windows.h>
 #include <list>
@@ -50,7 +48,7 @@ int main(int argc, char const *argv[])
     {
     case 1:
         system("cls");
-        cout << "OK i will do something" << endl;
+        cout << "What launcher do you want to " << endl;
         break;
     case 2:
         return 0;
