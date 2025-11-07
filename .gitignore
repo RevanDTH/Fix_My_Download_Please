@@ -1,0 +1,74 @@
+﻿# Build directories
+/build/
+/build-*/
+/out/
+/bin/
+/obj/
+
+# Compiled object files and executables
+*.o
+*.obj
+*.lo
+*.la
+*.a
+*.lib
+*.dll
+*.so
+*.dylib
+*.exe
+*.out
+*.elf
+*.app
+
+# Debug and linker files
+*.pdb
+*.ilk
+*.idb
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+install_manifest.txt
+Makefile
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.vcxproj.user
+*.vcxproj.*.user
+
+# Visual Studio Code
+.vscode/
+
+# Qt Creator
+*.pro.user
+*.qmake.stash
+
+# Code::Blocks
+*.depend
+*.layout
+
+# Logs, temp and editor files
+*.log
+*.tmp
+*.swp
+*~
+.DS_Store
+
+# Coverage and test
+coverage/
+*.gcno
+*.gcda
+*.lcov
+
+# Dependency manager/buildtrees
+vcpkg_installed/
+buildtrees/
+
+# Tags and IDE settings
+tags
+ctags
+.idea/
