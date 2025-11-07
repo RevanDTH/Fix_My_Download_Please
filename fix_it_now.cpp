@@ -1,5 +1,33 @@
+
+
+/*
+ * Author:
+ * RevanDTH
+ * 
+ * LAST MODIFIED:
+ *   2025-11-07
+ *
+ * VERSION:
+ *   0.1.0 (initial prototype)
+ *
+ * PLATFORM:
+ *   Windows
+ *   Mac (not at the moment)
+ * 
+ * DEPENDENCIES:
+ *   - <iostream>
+ *   - <Windows.h>
+ *   - <list> 
+ *
+ * NOTES:
+ *   - Just a small prototype I'm working on 
+ */
+
+
+
 #include <iostream>
 #include <Windows.h>
+#include <list>
 
 
 int main(int argc, char const *argv[])
