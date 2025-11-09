@@ -5,7 +5,7 @@
  * RevanDTH
  * 
  * LAST MODIFIED:
- *   2025-11-07
+ *   2025-11-09
  *
  * VERSION:
  *   0.1.0 (initial prototype)
@@ -17,7 +17,11 @@
  * DEPENDENCIES:
  *   - <iostream>
  *   - <Windows.h>
+ *   - <Psapi.h>
  *   - <list> 
+ *   - <map>
+ *   - <algorithm>
+ *   - <cctype>
  *
  * NOTES:
  *   - Just a small prototype I'm working on 
@@ -25,7 +29,11 @@
 
 #include <iostream>
 #include <Windows.h>
+#include <Psapi.h>
 #include <list>
+#include <map>
+#include <algorithm>
+#include <cctype>
 
 
 int main(int argc, char const *argv[])
@@ -34,6 +42,14 @@ int main(int argc, char const *argv[])
 
     int userChoice;
     string userLauncher;
+    map<string,list<string>> unusedProcesses;
+    
+
+
+    //looks very awfull I know, I need to rewrite that some day
+    unusedProcesses.insert({{"steam", {"Discord.exe","Update.exe","chrome.exe","msedge.exe","firefox.exe","Spotify.exe","Netflix.exe","EpicGamesLauncher.exe","EpicWebHelper.exe","EADesktop.exe","Origin.exe","UbisoftConnect.exe","upc.exe","Battle.net.exe","Agent.exe","RiotClientServices.exe","RiotClientCrashHandler.exe","OneDrive.exe","GoogleDriveFS.exe","iCloudDrive.exe","iCloudServices.exe","ApplePhotostreams.exe","Dropbox.exe","NordVPN.exe","NordVpnService.exe","ProtonVPN.exe","ProtonVPNService.exe","Surfshark.exe","SurfsharkService.exe","qbittorrent.exe","uTorrent.exe","JDownloader2.exe","javaw.exe","GeForceNOW.exe","XboxApp.exe","GamingServices.exe","GameBar.exe","Windows10Upgrade.exe","WindowsUpdateBox.exe","AvastUI.exe","AvastSvc.exe","avp.exe","bdagent.exe","vsserv.exe","TrueImageLauncher.exe","AcronisAgent.exe","bzserv.exe","bzbui.exe","MEGAsync.exe"}}});
+
+
 
     cout << "=====================" << endl;
     cout << "Fix My Download Please" << endl;
@@ -47,8 +63,22 @@ int main(int argc, char const *argv[])
     switch (userChoice)
     {
     case 1:
-        system("cls");
-        cout << "What launcher do you want to " << endl;
+        cin >> userLauncher;
+
+        // normalize launcher name to lowercase
+        std::transform(userLauncher.begin(), userLauncher.end(), userLauncher.begin(),
+            [](unsigned char c) { return static_cast<char>(std::tolower(c)); });
+
+        if (userLauncher == "steam")
+        {
+            //TO-DO: Read process identifier and name with psapi
+            // TO-DO: stop process with windows.h lib 
+
+        }
+        else
+        {
+            // unrecognized launcher
+        }
         break;
     case 2:
         return 0;
